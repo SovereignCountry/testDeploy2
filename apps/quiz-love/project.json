@@ -1,0 +1,24 @@
+{
+  "name": "quiz-love",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/quiz-love",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project quiz-love --web",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/quiz-love"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "."
+        },
+        "production": {}
+      }
+    }
+  }
+}
